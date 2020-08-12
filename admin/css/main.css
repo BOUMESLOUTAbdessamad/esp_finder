@@ -1,0 +1,46 @@
+.red {
+    background: #ff8888ba;
+}
+.bold {
+	font-weight: bold;
+}
+
+.remove-image {
+    position: relative;
+    float: right;
+    right: -10px;
+    top: 12px;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.flex-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+
+
+.remove-image:hover {
+    background-color: #8c8b8bc7;
+    transition: .4s;
+}
+
+
+.bootstrap-tagsinput input{
+
+    width: 100% !important;
+}
+
+.bootstrap-tagsinput{
+
+    width: 100% !important;
+}
+
+.tag .label .label-info {
+    background-color: red !important;
+}

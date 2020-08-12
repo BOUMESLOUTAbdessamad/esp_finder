@@ -1,0 +1,32 @@
+<div id="msgIn" data-id="{{id}}" data-date="{{created}}" class="direct-chat-msg">
+    <div class="direct-chat-info clearfix">
+        <span class="direct-chat-name pull-left">{{u1_fname}} {{u1_lname}}</span>
+        <span class="direct-chat-timestamp pull-right">{{ago}}</span>
+    </div>
+    <!-- /.direct-chat-info -->
+    <img class="direct-chat-img" src="/img/avatar.png" alt="Message User Image"><!-- /.direct-chat-img -->
+    <div class="direct-chat-text">
+        <p style="margin: 3px">{{text}}</p>
+        {{#if file_name}}
+            <a style="padding : 5px" href="{{js 'SITE_URL'}}uploads/{{file_path}}{{file_name}}" target="_blank"> <i class="fa fa-paperclip"></i> {{file_name}}</a>
+        {{/if}}
+    </div>
+    <!-- /.direct-chat-text -->
+</div>
+
+
+<div data-id="{{id}}" id="msgOut" data-date="{{created}}" class="direct-chat-msg right">
+    <div class="direct-chat-info clearfix">
+        <span class="direct-chat-name pull-right">{{u1_fname}} {{u1_lname}}</span>
+        <span class="direct-chat-timestamp pull-left">{{ago}}</span>
+    </div>
+    <!-- /.direct-chat-info -->
+    <img class="direct-chat-img" src="/img/avatar.png" alt="Message User Image"><!-- /.direct-chat-img -->
+    <div class="direct-chat-text">
+        <p style="margin: 3px">{{text}}</p>
+        {{#if file_name}}
+            <a class="text-gray" style="padding : 5px" href="{{js 'SITE_URL'}}uploads/{{file_path}}{{file_name}}" target="_blank" > <i class="fa fa-paperclip"></i> {{file_name}}</a>
+        {{/if}}
+    </div>
+    <!-- /.direct-chat-text -->
+</div>

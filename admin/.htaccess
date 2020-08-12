@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+#RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{THE_REQUEST} !^GET\s/+online/ [NC]
+RewriteRule . index.php [L]
+</IfModule>
+
+#Then add this for CI handling in the same .htaccess
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $1 !index\.php [NC]
+RewriteRule ^online/(.*)$ online/index.php?/$1 [L,NC]
