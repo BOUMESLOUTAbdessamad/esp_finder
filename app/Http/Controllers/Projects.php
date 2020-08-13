@@ -39,7 +39,6 @@ class Projects extends Controller
 
     public function bachelor() {
         $data['projects'] = DB::table('projects')
-                                    ->where('degree', '=', 'bachelor')
                                     ->orderBy('projects.id', 'desc')
                                     ->get()->toArray();
 
