@@ -28,7 +28,6 @@ class Projects extends Controller
         return view('/home', $data);
     }
 
-
     public function master() {
         $data['projects'] = DB::table('projects')
                                     ->where('degree', '=', 'master')
@@ -47,4 +46,16 @@ class Projects extends Controller
         return view('projects.bachelor', $data);
     }
 
+    public function view($id) {
+
+        $data['project'] = DB::table('projects')
+                            ->where([
+                                ['projects.id','=', $id]
+                            ])
+                            ->first();
+
+        return view('projects.view', $data);
+
+
+    }
 }

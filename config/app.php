@@ -52,10 +52,8 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
-
-    'asset_url' => env('ASSET_URL', null),
-
+    'url' =>'http://uresearch.herokuapp.com',
+    'asset_url' => 'https://uresearch.herokuapp.com',
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -174,7 +172,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
     ],
 
     /*

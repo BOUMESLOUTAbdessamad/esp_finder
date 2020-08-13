@@ -9,7 +9,6 @@
     </div>
   </div>
 <div class="container">
-
     <div class="row justify-content-center">
         {{-- <div class="col-md-12"> --}}
                 <div class="d-flex align-items-center flex-column">
@@ -46,9 +45,9 @@
                                     {{$project->created}} <br>
                                     Author : {{$project->author}}
                                 </span>
-                                <button class="btn btn-light btn-sm float-right">
+                                <a href="/project/{{$project->id}}" class="btn btn-info btn-sm float-right">
                                     Read more
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
