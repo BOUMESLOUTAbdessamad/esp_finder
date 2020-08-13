@@ -14,7 +14,7 @@ class Projects extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -30,13 +30,21 @@ class Projects extends Controller
 
 
     public function master() {
+        $data['projects'] = DB::table('projects')
+                                    ->where('degree', '=', 'master')
+                                    ->orderBy('projects.id', 'desc')
+                                    ->get()->toArray();
 
-        return view('/master', $data);
+        return view('projects.master', $data);
     }
 
     public function bachelor() {
+        $data['projects'] = DB::table('projects')
+                                    ->where('degree', '=', 'bachelor')
+                                    ->orderBy('projects.id', 'desc')
+                                    ->get()->toArray();
 
-        return view('/bachelor', $data);
+        return view('projects.bachelor', $data);
     }
 
 }

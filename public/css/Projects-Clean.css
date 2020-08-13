@@ -39,7 +39,7 @@
 .projects-clean .item {
   text-align: center;
   padding-top: 50px;
-  min-height: 425px;
+  max-height: 200px;
 }
 
 .projects-clean .item .name {

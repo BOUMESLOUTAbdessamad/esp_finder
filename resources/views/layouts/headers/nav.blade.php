@@ -1,12 +1,12 @@
 
 <nav class="navbar navbar-light navbar-expand-md shadow navigation-clean-search" style="background-color: #eeeeee;filter: invert(0%);">
-    <div class="container"><a class="navbar-brand" href="{{ url('/') }}">USearch</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    <div class="container"><a class="navbar-brand" href="{{ url('/') }}">UReaserch</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse"
             id="navcol-1">
             <ul class="nav navbar-nav">
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Home</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Bachelor</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="#">Masters</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="{{ route('/') }}">Home</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{ route('/bachelor') }}">Bachelor</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{ route('/master') }}">Master</a></li>
             </ul>
             <form class="form-inline" target="_self">
                 <div class="form-group float-right d-xl-flex">

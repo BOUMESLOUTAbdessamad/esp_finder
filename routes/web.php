@@ -15,9 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('/');
+
+Route::get('/master', 'Projects@master')->name('/master');
+
+Route::get('/bachelor', 'Projects@bachelor')->name('/bachelor');
 
 Route::get('/project', 'Projects@view');
 
