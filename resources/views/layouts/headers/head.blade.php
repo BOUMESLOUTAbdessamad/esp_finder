@@ -16,9 +16,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <link rel="stylesheet" href=" {{ asset('fonts/font-awesome.min.css')}} ">
-    <link rel="stylesheet" href=" {{ asset('fonts/ionicons.min.css') }} ">
+    {{-- <link rel="stylesheet" href=" {{ asset('fonts/ionicons.min.css') }} "> --}}
     <link rel="stylesheet" href=" {{ asset('css/Bootstrap-4---Product-List.css') }} ">
     <link rel="stylesheet" href=" {{ asset('css/Footer-Basic.css') }} ">
     <link rel="stylesheet" href=" {{ asset('css/Navigation-with-Search.css') }} ">

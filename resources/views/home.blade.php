@@ -11,7 +11,7 @@
         </div>
         <div class="row d-flex flex-row justify-content-around projects">
 
-            <div class='card degree' style="max-width: 324px; margin-bottom: 32px">
+            <div class='card degree shadow-sm' style="max-width: 324px; margin-bottom: 32px">
                 <a href="{{ route('/bachelor') }}" class="text-dark">
                 <img class="card-img-top" src="{{asset('img/waiting-1047677_1920.jpg')}}">
                     <div class="card-body">
@@ -21,7 +21,7 @@
                     </div>
                 </a>
             </div>
-            <div class='card degree' style="max-width: 324px; margin-bottom: 32px">
+            <div class='card degree shadow-sm' style="max-width: 324px; margin-bottom: 32px">
             <a href="{{ route('/master') }}" class="text-dark">
                     <img class="card-img-top" src="{{ asset('img/desk.jpg')}}">
                     <div class="card-body">

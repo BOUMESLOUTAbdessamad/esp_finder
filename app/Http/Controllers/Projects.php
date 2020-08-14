@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class Projects extends Controller
 {
     /**
@@ -39,8 +40,8 @@ class Projects extends Controller
 
     public function bachelor() {
         $data['projects'] = DB::table('projects')
-                                    ->orderBy('projects.id', 'desc')
-                                    ->get()->toArray();
+                        ->where('degree', '=', 'bachelor')
+                        ->orderBy('projects.id', 'desc')->get()->toArray();
 
         return view('projects.bachelor', $data);
     }
@@ -48,13 +49,22 @@ class Projects extends Controller
     public function view($id) {
 
         $data['project'] = DB::table('projects')
-                            ->where([
-                                ['projects.id','=', $id]
-                            ])
+                            ->where('projects.id','=', $id)
                             ->first();
 
         return view('projects.view', $data);
+    }
 
+    public function search(Request $req) {
+        $q = $req->input('q');
+        $data['projects'] = [];
+        if(isset($q)) {
+            $data['projects'] = DB::table('projects')
+                                ->where('projects.keywords', 'like', '%'.urldecode($q).'%')
+                                ->orderBy('projects.id', 'desc')->get()->toArray();
 
+        }
+
+        return view('projects.search', $data);
     }
 }

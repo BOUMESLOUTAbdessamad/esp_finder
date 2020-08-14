@@ -25,3 +25,4 @@ Route::get('/bachelor', 'Projects@bachelor')->name('/bachelor');
 
 Route::get('/project/{id}', 'Projects@view');
 
+Route::get('/search', 'Projects@search');
