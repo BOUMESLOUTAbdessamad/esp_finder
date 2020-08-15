@@ -11,9 +11,8 @@
     </div>
   </div>
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row">
         {{-- <div class="col-md-12"> --}}
-                <div class="d-flex align-items-center flex-column">
                 @foreach ($projects as $project)
                 <div class="col-md-12">
                     <div class="card" style="margin-bottom: 24px">
@@ -60,9 +59,7 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
-            </div>
-        {{-- </div> --}}
+            @endforeach
     </div>
 </div>
 @endsection
