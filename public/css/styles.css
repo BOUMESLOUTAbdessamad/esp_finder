@@ -1,4 +1,16 @@
 
 .degree:hover {
-    background-color: #ededed;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    -moz-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+
+}
+
+.border-green {
+    border-top-width: 6px !important;
+    border-top-color: #41b741 !important;
+}
+
+.border-orange {
+    border-top-width: 6px !important;
+    border-top-color: #f5de0d !important;
 }
